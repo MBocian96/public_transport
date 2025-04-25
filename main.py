@@ -7,6 +7,12 @@ app = FastAPI()
 app.include_router(dep_router)
 app.include_router(trip_router)
 
+
+@app.get("/")
+def hello():
+    return "hello "
+
+
 if __name__ == '__main__':
     import uvicorn
 
